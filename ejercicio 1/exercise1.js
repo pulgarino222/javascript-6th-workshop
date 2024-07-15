@@ -1,81 +1,109 @@
 //#### Ejercicio 1: El quiz del Scope.
-
-//- Considera el siguiente codigo:
-
+//sistema de alertas por si se va a pasar de la consola al DOOM
 
 
-class Answers{
 
 
-    static correctAnswer(){
-        Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "Your work has been saved",
-            showConfirmButton: false,
-            timer: 1500
-          })
-    
-    }
+// Global Scope
+var globalVariable = "Soy una variable global.";
 
-    static wrongAnswer(){
-         Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong!",
-            footer: '<a href="#">Why do I have this issue?</a>'
-          });
-    }
+function testScope() {
+  // Function Scope
+  var functionVariable = "Soy una variable local.";
 
+  if (true) {
+    // Block Scope
+    let blockVariable = "Soy una variable de bloque.";
+    console.log("Dentro del bloque:", blockVariable);
+  }
+
+  console.log("Dentro de la función:", functionVariable);
 }
 
 
 
+// Interacción del Usuario
+// El script solicita al usuario que adivine si puede acceder a las variables en diferentes partes del código.
+let respuestaGlobal = prompt("¿Puedes acceder a globalVariable? (Sí/No) Por qué?");
+let respuestaFuncion = prompt("¿Puedes acceder a functionVariable? (Sí/No) Por qué?");
+let respuestaBloque = prompt("¿Puedes acceder a blockVariable? (Sí/No) Por qué?");
+
+// Validación de Respuestas
+// Evaluar respuestas y mostrar resultados
+if (respuestaGlobal.toLowerCase() === "sí") {
+  
+  console.log("Respuesta correcta para globalVariable.");
+} else {
+  console.log("Respuesta incorrecta para globalVariable.");
+  console.log("globalVariable es una variable global, por lo que es accesible desde cualquier parte del código.");
+}
+
+if (respuestaFuncion.toLowerCase() === "sí") {
+  console.log("Respuesta correcta para functionVariable.");
+} else {
+  console.log("Respuesta incorrecta para functionVariable.");
+  console.log("functionVariable está declarada dentro de la función testScope(), por lo que solo es accesible dentro de esa función.");
+}
+
+if (respuestaBloque.toLowerCase() === "no") {
+  console.log("Respuesta correcta para blockVariable.");
+} else {
+  console.log("Respuesta incorrecta para blockVariable.");
+  console.log("blockVariable está declarada con let dentro de un bloque if {}, por lo que solo es accesible dentro de ese bloque.");
+}
 
 
-//this just one sistem of alerts that import to sweetalert.com
-Swal.fire({
-    title: "Sweet!",
-    text: "comienza el juego vas a adivinar si es posible acceder a cada una de las variables",
-    imageUrl: "https://unsplash.it/400/200",
-    imageWidth: 400,
-    imageHeight: 200,
-    imageAlt: "Custom image"
-  })
-    let answerglobal =prompt("es posible acceder a una variable global fuera de la funcion ¿si o no?")
+console.log("Ejecutando testScope():");
+testScope();
+
+
+
+// class Alerts{
+//     static correctAnswer(){
+//       let correct=Swal.fire({
+//             position: "top-end",
+//             icon: "success",
+//             title: "tu respuesta fue correcta",
+//             showConfirmButton: false,
+//             timer: 1500
+//           })
+//           return correct
     
+//     }
 
-    if(answerglobal==="si"){
-        Answers.correctAnswer().then()
-        testScope()
-    }else {
-        Answers.wrongAnswer()
-    }
+//     static wrongAnswer(){
+//          Swal.fire({
+//             icon: "error",
+//             title: "Oops...",
+//             text: "tu respuesta es equivocada",
+//           });
+//     }
 
-    
+//     static explicationAnswer(){
+//       Swal.fire({
+//         title: "<strong>HTML <u>explication</u></strong>",
+//         icon: "info",
+//         html: `
+//           You can use <b>bold text</b>,
+//           <a href="#" autofocus>links</a>,
+//           and other HTML tags
+//         `,
+//         showCloseButton: true,
+//         showCancelButton: true,
+//         focusConfirm: false,
+//         confirmButtonText: `
+//           <i class="fa fa-thumbs-up"></i> Great!
+//         `,
+//         confirmButtonAriaLabel: "Thumbs up, great!",
+//         cancelButtonText: `
+//           <i class="fa fa-thumbs-down"></i>
+//         `,
+//         cancelButtonAriaLabel: "Thumbs down"
+//       });
+//     }
 
+// }
 
-
-
- 
-  // Global Scope
-  var globalVariable = "Soy una variable global.";
-
-  function testScope() {
-    // Function Scope
-    var functionVariable = "Soy una variable local.";
-
-    if (true) {
-      // Block Scope
-      let blockVariable = "Soy una variable de bloque.";
-      console.log("Dentro del bloque:", blockVariable);
-    }
-
-    console.log("Dentro de la función:", functionVariable);
-  }
-
-  console.log("Fuera de la función:", globalVariable);
-  testScope();
 
 
 
