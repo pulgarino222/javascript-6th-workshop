@@ -1,84 +1,92 @@
 {
-    "roomTypes": [
-      {
-        "id": 1,
-        "name": "Individual",
-        "description": "Habitación para una persona",
-        "capacity": 1
-      },
-      {
-        "id": 2,
-        "name": "Doble",
-        "description": "Habitación para dos personas",
-        "capacity": 2
-      },
-      {
-        "id": 3,
-        "name": "Suite",
-        "description": "Habitación lujosa con sala de estar",
-        "capacity": 4
-      },
-      {
-        "id": 4,
-        "name": "Familiar",
-        "description": "Habitación para 4 personas",
-        "capacity": 4
-      },
-      {
-        "id": 5,
-        "name": "Presidencial",
-        "description": "Habitación lujosa con sala de estar y comedor",
-        "capacity": 6
-      }
-    ],
-    "rooms": [
-      {
-        "number": 101,
-        "roomTypeId": 1,
-        "priceNight": 50,
-        "availability": true
-      },
-      {
-        "number": 102,
-        "roomTypeId": 2,
-        "priceNight": 80,
-        "availability": true
-      },
-      {
-        "number": 103,
-        "roomTypeId": 2,
-        "priceNight": 80,
-        "availability": true
-      },
-      {
-        "number": 104,
-        "roomTypeId": 3,
-        "priceNight": 150,
-        "availability": true
-      },
-      {
-        "number": 105,
-        "roomTypeId": 3,
-        "priceNight": 200,
-        "availability": true
-      },
-      {
-        "number": 106,
-        "roomTypeId": 3,
-        "priceNight": 200,
-        "availability": true
-      },
-      {
-        "number": 107,
-        "roomTypeId": 4,
-        "priceNight": 200,
-        "availability": true
-      },
-      {
-        "number": 108,
-        "roomTypeId": 5,
-        "priceNight": 300,
-        "availability": true
-      }
-    ]
-  }
+  "roomTypes": [
+    {
+      "id": "1",
+      "name": "Individual",
+      "description": "Habitación para una persona",
+      "capacity": 1
+    },
+    {
+      "id": "2",
+      "name": "Doble",
+      "description": "Habitación para dos personas",
+      "capacity": 2
+    },
+    {
+      "id": "3",
+      "name": "Suite",
+      "description": "Habitación lujosa con sala de estar",
+      "capacity": 4
+    },
+    {
+      "id": "4",
+      "name": "Familiar",
+      "description": "Habitación para 4 personas",
+      "capacity": 4
+    },
+    {
+      "id": "5",
+      "name": "Presidencial",
+      "description": "Habitación lujosa con sala de estar y comedor",
+      "capacity": 6
+    }
+  ],
+  "rooms": [
+    {
+      "number": 101,
+      "roomTypeId": 1,
+      "priceNight": 50,
+      "availability": false,
+      "id": "76f4"
+    },
+    {
+      "number": 102,
+      "roomTypeId": 2,
+      "priceNight": 80,
+      "availability": false,
+      "id": "a442"
+    },
+    {
+      "number": 103,
+      "roomTypeId": 2,
+      "priceNight": 80,
+      "availability": false,
+      "id": "6eba"
+    },
+    {
+      "number": 104,
+      "roomTypeId": 3,
+      "priceNight": 150,
+      "availability": true,
+      "id": "f95f"
+    },
+    {
+      "number": 105,
+      "roomTypeId": 3,
+      "priceNight": 200,
+      "availability": true,
+      "id": "4b79"
+    },
+    {
+      "number": 106,
+      "roomTypeId": 3,
+      "priceNight": 200,
+      "availability": true,
+      "id": "907c"
+    },
+    {
+      "number": 107,
+      "roomTypeId": 4,
+      "priceNight": 200,
+      "availability": true,
+      "id": "657f"
+    },
+    {
+      "number": 108,
+      "roomTypeId": 5,
+      "priceNight": 300,
+      "availability": true,
+      "id": "cca4"
+    }
+  ]
+}
