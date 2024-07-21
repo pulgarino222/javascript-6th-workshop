@@ -78,7 +78,7 @@
       "number": 107,
       "roomTypeId": 4,
       "priceNight": 200,
-      "availability": true,
+      "availability": false,
       "id": "657f"
     },
     {
